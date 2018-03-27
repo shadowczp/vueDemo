@@ -22,6 +22,9 @@ var app = new Vue({
     methods: {
         reverseMessage: function () {
             this.message = this.message.split('').reverse().join('')
+        },
+        cc: function () {
+            alert('haha')
         }
     },
     computed: {
