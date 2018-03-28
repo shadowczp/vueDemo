@@ -17,7 +17,11 @@ var app = new Vue({
             {id: 0, text: '蔬菜'},
             {id: 1, text: '奶酪'},
             {id: 2, text: '随便其它什么人吃的东西'}
-        ]
+        ],
+        items: {
+            name: 'czp',
+            age: 20
+        }
     },
     methods: {
         reverseMessage: function () {
