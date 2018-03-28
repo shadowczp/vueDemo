@@ -21,6 +21,10 @@ var app = new Vue({
         items: {
             name: 'czp',
             age: 20
+        },
+        lists:['第一个','第二个','第三个'],
+        test:{
+            a:'gg'
         }
     },
     methods: {

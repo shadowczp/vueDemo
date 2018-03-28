@@ -46,10 +46,17 @@
         </todo-item>
     </ol>
     <ul>
-        <li v-for="item in items">
-            {{item}}
+        <li v-for="(item,indexName,index) of items">
+            {{item + "-"+indexName+"-"+index}}
         </li>
     </ul>
+
+    <ul>
+        <li v-for="(item,indexName,index) of lists">
+            {{item + "-"+indexName+"-"+index}}
+        </li>
+    </ul>
+    <span>{{test.a}} {{test.b}} {{test.c}}</span>
 </div>
 
 
