@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="../js/vue.js"></script>
+
 </head>
 <body>
 <script src="../js/component.js"></script>
-<div id="app">
+<div id="app" v-cloak>
     <div>
         {{ message }}
     </div>
     <button @click="cc" :class="message">{{message}}</button>
-  <span v-bind:title="message + '哈哈哈'">
+    <span v-bind:title="message + '哈哈哈'">
     鼠标悬停几秒钟查看此处动态绑定的提示信息！{{fuck}}
   </span>
     <p v-if="seen">现在你看到我了</p>
@@ -59,7 +59,6 @@
     <span>{{test.a}} {{test.b}} {{test.c}}</span>
 
 
-
     <div>
         <input type="radio" id="one" value="One" v-model="picked">
         <label for="one">One</label>
@@ -83,7 +82,6 @@
     </div>
 
 
-
     <br>
     <br>
     <br>
@@ -92,14 +90,19 @@
     </div>
 
 
-
-
+    <my-awesome-list :items="todos">
+        <!-- 作用域插槽也可以是具名的 -->
+        <li
+                slot="item"
+                slot-scope="props">
+            {{ props.text }}
+        </li>
+    </my-awesome-list>
 
 
 </div>
 
-
-
+<script src="../js/vue.js"></script>
 <script src="../js/index.js"></script>
 </body>
 </html>
