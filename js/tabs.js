@@ -56,7 +56,8 @@ Vue.component('tabs',{
             var tabs = this.getTabs();
             var _this = this;
             tabs.forEach(function (tab) {
-                console.log(_this.currentValue);
+                console.log(_this.currentValue+ (typeof _this.currentValue));
+                console.log(tab.name+ (typeof tab.name));
                 tab.show = (tab.name === _this.currentValue);
                 console.log(tab.show);
                 return tab.show;
